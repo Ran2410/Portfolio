@@ -39,7 +39,7 @@ const headingVariants = {
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center px-6 md:px-12 lg:px-20">
-      <div className="max-w-6xl w-full pt-20">
+      <div className="max-w-6xl mx-auto pt-20">
         <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left: Text */}
           <motion.div
