@@ -1,30 +1,40 @@
-import { motion } from 'motion/react'
+import { motion } from "motion/react";
 import {
-  SiReact, SiNodedotjs, SiExpress, SiLaravel,
-  SiPostgresql, SiMysql, SiFlutter, SiTailwindcss,
-  SiJavascript, SiPhp, SiPython, SiGit
-} from 'react-icons/si'
+  SiReact,
+  SiNodedotjs,
+  SiExpress,
+  SiLaravel,
+  SiPostgresql,
+  SiMysql,
+  SiFlutter,
+  SiTailwindcss,
+  SiJavascript,
+  SiPhp,
+  SiPython,
+  SiGit,
+} from "react-icons/si";
+import SplitReveal from "./SplitReveal";
 
 const skills = [
-  { name: 'React', icon: SiReact },
-  { name: 'Node.js', icon: SiNodedotjs },
-  { name: 'Express', icon: SiExpress },
-  { name: 'Laravel', icon: SiLaravel },
-  { name: 'PostgreSQL', icon: SiPostgresql },
-  { name: 'MySQL', icon: SiMysql },
-  { name: 'Flutter', icon: SiFlutter },
-  { name: 'TailwindCSS', icon: SiTailwindcss },
-  { name: 'JavaScript', icon: SiJavascript },
-  { name: 'PHP', icon: SiPhp },
-  { name: 'Python', icon: SiPython },
-  { name: 'Git', icon: SiGit },
-]
+  { name: "React", icon: SiReact },
+  { name: "Node.js", icon: SiNodedotjs },
+  { name: "Express", icon: SiExpress },
+  { name: "Laravel", icon: SiLaravel },
+  { name: "PostgreSQL", icon: SiPostgresql },
+  { name: "MySQL", icon: SiMysql },
+  { name: "Flutter", icon: SiFlutter },
+  { name: "TailwindCSS", icon: SiTailwindcss },
+  { name: "JavaScript", icon: SiJavascript },
+  { name: "PHP", icon: SiPhp },
+  { name: "Python", icon: SiPython },
+  { name: "Git", icon: SiGit },
+];
 
 const stats = [
-  { value: '10+', label: 'Projects shipped' },
-  { value: '3+', label: 'Years building' },
-  { value: '12+', label: 'Technologies' },
-]
+  { value: "10+", label: "Projects shipped" },
+  { value: "3+", label: "Years building" },
+  { value: "12+", label: "Technologies" },
+];
 
 export default function About() {
   return (
@@ -41,9 +51,12 @@ export default function About() {
           <p className="font-mono text-xs text-fg-tertiary tracking-widest uppercase mb-4">
             Background
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-fg-primary tracking-tight">
+          <SplitReveal
+            as="h2"
+            className="font-display text-4xl md:text-5xl font-bold text-fg-primary tracking-tight"
+          >
             About
-          </h2>
+          </SplitReveal>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-16 md:gap-20">
@@ -56,16 +69,19 @@ export default function About() {
           >
             <div className="space-y-5 text-fg-secondary leading-relaxed">
               <p>
-                I'm a full-stack developer and mobile app engineer based in Depok, Indonesia. 
-                I focus on building applications that are fast, maintainable, and genuinely useful 
-                — from backend architecture to polished interfaces.
+                I'm a full-stack developer and mobile app engineer based in
+                Depok, Indonesia. I focus on building applications that are
+                fast, maintainable, and genuinely useful — from backend
+                architecture to polished interfaces.
               </p>
               <p>
-                My stack spans Laravel, Express, React, and Flutter. I care about clean architecture, 
-                thoughtful database design, and the systems thinking that ties it all together.
+                My stack spans Laravel, Express, React, and Flutter. I care
+                about clean architecture, thoughtful database design, and the
+                systems thinking that ties it all together.
               </p>
               <p>
-                Currently open to remote collaborations and interesting projects worldwide.
+                Currently open to remote collaborations and interesting projects
+                worldwide.
               </p>
             </div>
 
@@ -96,7 +112,7 @@ export default function About() {
             </h3>
             <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
               {skills.map((skill) => {
-                const Icon = skill.icon
+                const Icon = skill.icon;
                 return (
                   <div
                     key={skill.name}
@@ -108,12 +124,12 @@ export default function About() {
                       {skill.name}
                     </span>
                   </div>
-                )
+                );
               })}
             </div>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }

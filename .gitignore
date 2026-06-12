@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Internal planning/brief docs — not part of shipped product
+_animation-brief/

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
+import SplitReveal from './SplitReveal'
 
 const contactLinks = [
   {
@@ -63,9 +64,12 @@ export default function Contact() {
           <p className="font-mono text-xs text-fg-tertiary tracking-widest uppercase mb-4">
             Start a conversation
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-fg-primary tracking-tight">
-            Get in touch
-          </h2>
+          <SplitReveal
+  as="h2"
+  className="font-display text-4xl md:text-5xl font-bold text-fg-primary tracking-tight"
+>
+  Get in touch
+</SplitReveal>
           <p className="font-body text-fg-secondary mt-4 max-w-md">
             Have a project in mind or just want to connect? Drop a message.
           </p>
